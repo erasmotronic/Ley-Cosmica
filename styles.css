@@ -1,0 +1,454 @@
+:root {
+    --darkBlue: #010859;
+    --paleBlue: #01bcdb;
+    --almostGray: #bfbfbf;
+    --newOrange: #FF8C00;
+    --fontSpline: 'Titillium Web', sans-serif;
+}
+
+
+/*Fixes*/
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    background-image: linear-gradient(to bottom, var(--darkBlue) 0%, var(--paleBlue) 100%);
+    background-repeat: repeat-x;
+    color: whitesmoke;
+    font-family: var(--fontSpline);
+}
+
+
+/*Main Body*/
+
+h1 {
+    color: var(--almostGray);
+    font-size: 4rem;
+}
+
+@media(min-width:768px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: var(--almostGray);
+}
+
+a:hover {
+    color: var(--newOrange);
+}
+
+strong {
+    color: var(--newOrange);
+}
+
+#introBox {
+    padding: 1rem 0rem;
+}
+
+@media(min-width:768px) {
+    #introBox {
+        width: 75%;
+        margin: auto;
+    }
+}
+
+.imageBox {
+    background-image: url(images/urbi-et-orbi.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: auto;
+    width: auto;
+    /* padding-top: 1rem; */
+}
+
+.blackBox {
+    background-color: rgba(0, 0, 0, 0.697);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 10rem; */
+}
+
+.articleBox {
+    background-color: rgba(0, 0, 0, 0.697);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0.2rem solid var(--newOrange);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+@media(min-width:768px) {
+    .headerBox {
+        height: 20rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    font-variant: small-caps;
+    padding: 0rem 1rem;
+    color: var(--newOrange);
+}
+
+h3 {
+    font-size: large;
+    text-transform: capitalize;
+    color: var(--almostGray);
+}
+
+@media(min-width:1200px) {
+    h2 {
+        font-size: 3rem;
+    }
+}
+
+button {
+    border-style: none;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--darkBlue);
+    color: var(--almostGray);
+    font-weight: bold;
+    font-size: larger;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--newOrange);
+    color: black;
+}
+
+.navBar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    background-color: var(--paleBlue);
+    /* position: sticky;
+    top: 0; */
+}
+
+@media(min-width:768px) {
+    .navBar {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.barBox:hover {
+    background-color: black;
+}
+
+#mainContainer {
+    /* width: 50%; */
+    margin: auto;
+    padding-bottom: 0.5rem;
+}
+
+@media(min-width:768px) {
+    #mainContainer {
+        width: 95%;
+    }
+}
+
+.floteBox {
+    float: left;
+    position: sticky;
+    top: 23rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media(min-width:768px) {
+    .floteBox {
+        top: 12rem;
+    }
+}
+
+
+#articleGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+@media(min-width:768px) {
+    #articleGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width:1200px) {
+    #articleGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+#articleGrid p {
+    padding: 1rem;
+}
+
+
+/**/
+
+#libraryGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+@media(min-width:768px) {
+    #libraryGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+#libraryGrid p {
+    padding: 1rem;
+}
+
+@keyframes essencialLight {
+    from {
+        background-color: var(--almostGray);
+    }
+    to {
+        background-color: var(--newOrange);
+    }
+}
+
+.essentialContent {
+    animation-name: essencialLight;
+    animation-duration: 8s;
+    border-radius: 2rem;
+}
+
+.imageThumbnails {
+    display: inline-block;
+    width: 100%;
+    height: 250;
+    border-radius: 2rem;
+    border: 0.5rem solid var(--paleBlue);
+}
+
+.imageThumbnails:hover {
+    cursor: pointer;
+    border: 0.5rem solid var(--newOrange);
+}
+
+footer {
+    background-image: url(images/gender_03.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    height: 10rem;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+
+/*Content Paragraphs*/
+
+.hiddenParagraph {
+    display: none;
+}
+
+.hiddenVideo {
+    /* this makes video to responsive */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.videoIframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* @media(min-width:768px) {
+    .odyseeVideo {
+        width: 56rem;
+        height: 31.5rem;
+    }
+} */
+
+.beautifulTitle {
+    background-image: url(images/title-bg_01.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.magicLibrary {
+    background-image: url(images/greatLibrary.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoThumbnail {
+    width: 4rem;
+    height: auto;
+}
+
+@media(min-width:768px) {
+    .logoThumbnail {
+        width: 2rem;
+        height: auto;
+    }
+}
+
+/*Custom Preferences*/
+
+#governmentSlaveryTitle {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+@media(min-width:768px) {
+    #governmentSlaveryTitle {
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+    }
+}
+
+#freeBeingsTitle {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+}
+
+@media(min-width:768px) {
+    #freeBeingsTitle {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+    }
+}
+
+#fearIllusionTitle {
+    grid-row: 7 / 8;
+    grid-column: 2 / 3;
+}
+
+@media(min-width:768px) {
+    #fearIllusionTitle {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+    }
+}
+
+#allIsLoveTitle {
+    grid-row: 10 / 11;
+    grid-column: 1 / 2;
+}
+
+@media(min-width:768px) {
+    #allIsLoveTitle {
+        grid-row: 7 / 8;
+        grid-column: 3 / 4;
+    }
+}
+
+#asAboveSoBelowTitle {
+    grid-row: 15 / 16;
+    grid-column: 2 / 3;
+}
+
+@media(min-width:768px) {
+    #asAboveSoBelowTitle {
+        grid-row: 10 / 11;
+        grid-column: 3 / 4;
+    }
+}
+
+#cosmicAdulthood {
+    grid-row: 18 / 19;
+    grid-column: 1 / 2;
+}
+
+@media(min-width:768px) {
+    #cosmicAdulthood {
+        grid-row: 12 / 13;
+        grid-column: 2 / 3;
+    }
+}
+
+#shySlavery {
+    grid-row: 27 / 28;
+    grid-column: 1 / 2;
+}
+
+@media(min-width:768px) {
+    #shySlavery {
+        grid-row: 18 / 19;
+        grid-column: 2 / 3;
+    }
+}
+
+#cosmicaHarmony {
+    grid-row: 31 / 32;
+    grid-column: 2 / 3;
+}
+
+@media(min-width:768px) {
+    #cosmicaHarmony {
+        grid-row: 22 / 23;
+        grid-column: 2 / 3;
+    }
+}
+
+/* Library */
+
+.libraryBox {
+    width: 100%;
+    height: 50rem;
+}
+
+@media(min-width:768px) {
+    .libraryBox {
+        width: 80rem;
+        height: 60rem;
+    }
+}
